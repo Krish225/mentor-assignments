@@ -1,0 +1,34 @@
+Describe the different states of a Thread and when do the state transitions occur.
+
+During any given point of time, the thread can only be in one of these states:
+
+	1) NEW 
+    	2) RUNNABLE 
+    	3) BLOCKED 
+    	4) WAITING 
+    	5) TIMED_WAITING 
+	6) TERMINATED 
+
+Occurence of Each State Transitions:
+
+	1) New - A newly created thread that has not yet started the execution. It remains in this state until we start it using the start() method.
+	
+	2) Runnable - Threads in this state are either running or ready to run, but they're waiting for resource allocation from the system. When we have created a new thread and called the start() method on that, it's moved from NEW to RUNNABLE state. 
+	
+	3) Blocked - A thread is in the BLOCKED state when it's currently not eligible to run. It enters this state when it is waiting for a monitor lock and is trying to access a section of code that is locked by some other thread.
+
+	4) Waiting - A thread is in WAITING state when it's waiting for some other thread to perform a particular action without any time limit.
+		     Any thread can enter this state by calling any one of the following three methods: 
+			1. object.wait(), 
+			2. thread.join(), or 
+			3. LockSupport.park()
+	
+	5) Timed_Waiting - A thread is in TIMED_WAITING state when it's waiting for another thread to perform a particular action for a specified time period. 
+			   There are five ways to put a thread on TIMED_WAITING state:
+				1. thread.sleep(long millis)
+    				2. wait(int timeout) or wait(int timeout, int nanos)
+    				3. thread.join(long millis)
+    				4. LockSupport.parkNanos
+    				5. LockSupport.parkUntil
+	
+	6) Terminated - This is the state of a dead thread. It's in the TERMINATED state when it has either finished execution or was terminated abnormally.

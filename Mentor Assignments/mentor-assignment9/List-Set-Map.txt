@@ -1,0 +1,35 @@
+Describe all the List, Set, Map implemented classes and their preferred usage in terms of storage, retrieval and null Handling.
+
+List - A List in java extends the collection interface and represent an sequenced or ordered group of elements. It can contain duplicate elements. It also defines some additional methods which it inherits from Collection interface.
+
+Set - A set represents a group or collection of items. Set has a special property that is unique items, it can not contain a duplicate item or element. It extends the collection interface.
+
+Map - A map not extends the Collection interface. It represents a group of special elements or objects. Every map element or object contains key and value pair. A map can’t contain duplicate keys and one key can refer to at most one value.
+
+
+List.vs.Set.vs.Map
+
+1. Duplicate Elements
+
+	List - Allow duplicate elements.
+	Set - Does not allow duplicate elements.
+	Map - Does not allow duplicate key but values can be duplicate.
+
+2. Null Handling
+
+	List - Allow multiple null values.
+	Set - Allow single null value.
+	Map - Allow single null as key and multiple null as values.
+
+3. Retrieval
+
+	List - Listlterator is an interface that contains methods to retrieve the elements from a collection object, both in forward and reverse directions.
+	Set - Iterator can be used to retrieve the set elements
+	Map - Values can be retrieved through keyset, value, and entry set.
+
+4. Implementation Classes:
+
+	List - Array List, LinkedList.,
+	Set - HashSet, LinkedHashSet, TreeSet, SortedSet.,
+	Map - HashMap, HashTable, TreeMap, ConcurrentHashMap, LinkedHashMap, IdentityHashMap, WeakHashMap.,
+

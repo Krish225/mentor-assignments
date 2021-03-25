@@ -1,0 +1,6 @@
+List the access modifiers in the order of increasing restrictiveness
+
+1) private - accessible within the class where defined
+2) protected - applies only when inheritance is involved
+3) default or package private - when no access specifier is specified
+4) public - accessible from any class 
